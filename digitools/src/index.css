@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --primary: #6d28d9;
+}
+
+body {
+  font-family: 'Inter', system_ui, sans-serif;
+}
+
+.hero-bg {
+  background: linear-gradient(90deg, #c2c2c2 0%, hsl(0, 0%, 100%) 100%);
+}
+
+.navbar {
+  box-shadow: 0 1px 0 0 rgb(0 0 0 / 0.05);
+}
+
+/* Force exact vibrant colors */
+.bg-violet-600, .btn.bg-violet-600 {
+  background-color: #6d28d9 !important;
+}
+.btn.bg-violet-600:hover {
+  background-color: #5b21b6 !important;
+}
+.text-violet-600 { color: #6d28d9 !important; }
+
+.card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 25px 25px 0 -10px #6d28d9;
+}
+
+.toast {
+  animation: toastIn 0.3s ease forwards;
+}
+@keyframes toastIn {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
